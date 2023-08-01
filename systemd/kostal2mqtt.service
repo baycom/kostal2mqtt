@@ -1,0 +1,12 @@
+[Unit]
+Description=Kostal MODBUS -> MQTT Bridge
+
+[Service]
+ExecStart=/usr/bin/node /home/pi/proj/smarthome/kostal2mqtt/index.js -d -c kostalMQTT -i lwip
+WorkingDirectory=/home/pi/proj/smarthome/kostal2mqtt
+Restart=always
+RestartSec=1
+SyslogIdentifier=kostal2mqtt
+
+[Install]
+WantedBy=multi-user.target
