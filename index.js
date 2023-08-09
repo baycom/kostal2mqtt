@@ -177,7 +177,6 @@ const getMetersValue = async (meters) => {
                 }
                 await sleep(100);
                 if(KostalSerialNumber[meter]) {
-                	console.log(KostalSerialNumber[meter]);
 			await getPIKORegisters(meter);
 		}
 		pos++;
