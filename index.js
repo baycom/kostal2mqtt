@@ -58,7 +58,7 @@ function sendMqtt(id, data) {
         if(options.debug) {
 	        console.log("publish: "+'Kostal/' + id, JSON.stringify(data));
 	}
-        MQTTclient.publish('Kostal/' + id, JSON.stringify(data));        
+        MQTTclient.publish('Kostal/' + id, JSON.stringify(data), { retain: true });
 }
 
 const PIKOPayloadParser_56 = new Parser()
